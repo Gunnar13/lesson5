@@ -5,6 +5,19 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+    <div>
+      <div>
+    <header>
+      <a href="#dasboard">Dashboard</a>
+      <a href="#about">Dashboard</a>
+      <a href="#unknown">dev/null</a>
+    </header>
+    <PageDashboard v-if="page === 'dasboard'" />
+    <PageAbout v-else-if="page === 'about'" />
+    <Page404 v-else />
+  </div>
+
+    </div>
   </div>
 </template>
 
